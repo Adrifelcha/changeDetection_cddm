@@ -59,18 +59,18 @@ ag[1:5,,c,p]
 
 For each trial, we collect the following information:
 
-1. Predicted location (`resp`) - 
-2. The true location (`true`) - The location of the spaceship that the participant observes, measured in radians.
-3. Mean location (`mean`) - The mean of the Normal
+1. Predicted location (`resp`) - The response the participant gave when trying to predict the location of the spaceship on the next trial, measured in radians.
+2. The true location (`true`) - The location (in radians) of the spaceship that the participant observes.
+3. Mean location (`mean`) - The mean (in radians) of the Normal distribution from where the locations observed on every trial are observed.
 4. Velocity (`velocity`) - 
 5. Change-points (`change`) - A binary variable indicating whether a change has occured or not
 6. RTs (`rt`) - Response time in seconds
 
-
-
-The four conditions 
+The four conditions are described below.
 
 ## Conditions
+
+There are four different experimental conditions in this experiment. To discuss each one of them 
 
 ```{r}
 data_stationary <- ag[,,1,]
