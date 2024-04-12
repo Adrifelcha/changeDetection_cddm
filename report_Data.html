@@ -7,9 +7,9 @@
 
         <meta name="author" content="Adriana F. Chavez" />
     
-        <meta name="date" content="2024-04-10" />
+        <meta name="date" content="2024-04-12" />
     
-    <title>Change detection task - Data description</title>
+    <title>Change detection task - Data</title>
 
         <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1824,8 +1824,7 @@ margin-left: 0 !important;
    <div class="book with-summary">
       <div class="book-summary">
         <ul>
-          <li class="title">Change detection task - Data
-description</li>
+          <li class="title">Change detection task - Data</li>
           <li class="divider"></li>
         </ul>
         <nav role="navigation" id="toc">
@@ -1835,17 +1834,18 @@ description</li>
           <li><a href="#data-description" id="toc-data-description">Data
           description</a>
           <ul>
-          <li><a href="#conditions" id="toc-conditions">Conditions</a></li>
-          <li><a href="#gradual" id="toc-gradual">Gradual</a></li>
-          <li><a href="#mixed" id="toc-mixed">Mixed</a></li>
+          <li><a href="#transformations" id="toc-transformations">Transformations</a></li>
+          <li><a href="#required-cleaning-steps" id="toc-required-cleaning-steps">Required cleaning
+          steps</a></li>
           </ul></li>
+          <li><a href="#data-per-condition" id="toc-data-per-condition">Data per condition</a></li>
           </ul>
         </nav>
         <ul class="authors">
           <li class="divider"></li>
                                 <li><span><i class="glyphicon glyphicon-user"></i> Adriana
 F. Chavez</span></li>
-                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2024-04-10</span></li>
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2024-04-12</span></li>
                   </ul>     
       </div>
       <div class="book-body fixed">
@@ -1858,7 +1858,7 @@ F. Chavez</span></li>
       
    
         
-      <h1 class="title">Change detection task - Data description</h1>
+      <h1 class="title">Change detection task - Data</h1>
       
         
 
@@ -1868,38 +1868,47 @@ F. Chavez</span></li>
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div id="task-description" class="section level1">
 <h1>Task description:</h1>
-<p><strong>Task set-up:</strong> Participants saw on screen an image of
-planet Earth surrounded by a dotted blue orbit. On every trial, a space
-ship appeared somewhere along the orbit, with it’s trial-by-trial
-position being a sample from a Normal distribution with some mean and
-standard deviation.</p>
+<p><strong>Task set-up:</strong> An image of planet Earth with an blue
+dotted orbit was presented at the center of the screen. On every trial,
+a spaceship would appear somewhere along the orbit, with the
+trial-by-trial position being sampled from a Normal distribution with
+some mean and standard deviation.</p>
 <p><strong>Instruction:</strong> Participants were instructed to predict
-the position of the spaceship on the next trial.</p>
-<p><strong>Trial description</strong> The spaceship appeared for half a
-second somewhere along the drawn orbit.</p>
-<blockquote>
-<p>’‘… participants were required to predict the future position of a
-spaceship moving around planet Earth along a specified orbit (…) Its
-location was given in radians (rad) using the center of the orbit as
-reference. On every trial, the spaceship appeared for half a second on a
-given point of its orbit, after which it disappeared. Participants had
-to click on the position where they thought it would reappear in the
-next trial. After their choice, a red dot indicated the location they
-selected and a red circle a fixed margin of error. At the same time, the
-spaceship showed up in its new position. If it fell inside the red
-circle, it turned red indicating the new location was accurately
-predicted or remained the same color otherwise. There was no time limit
-for participants to emit their responses. This sequence was repeated
-throughout the experiment. Moreover, if the spaceship gave a full lap in
-a counterclock-wise direction, i.e., moving 2π rad, the second lap would
-continue from 2π rad to 4π rad, and so on. Similarly if the spaceship
-completed a full lap in a clockwise direction, its next position was
-given according to values of the previous lap. We followed the same
-logic to register participant’s responses. This transformation allowed
-the range of possible values of observations and responses to span from
--∞ to ∞, and was particularly useful to avoid sudden changes of position
-from 2π rad to 0 every time a full lap was completed.’’</p>
-</blockquote>
+the position of the spaceship on the next trial by clicking somewhere
+along the orbit.</p>
+<p><strong>Trial description:</strong></p>
+<ol start="0" style="list-style-type: decimal">
+<li><p><em>Trial starts.</em> A spaceship appears somewhere along the
+drawn orbit for half a second, and then disappears</p></li>
+<li><p><em>Participants’ input.</em> Participants are given unlimited
+time to indicate the place along the circumference where they expect the
+spaceship to appear on the next trial.</p></li>
+<li><p><em>Input confirmation.</em> A red dot indicating the predicted
+location was presented inside a red circle capturing the margin error.
+At the same time, the spaceship showed up in its new position.</p></li>
+<li><p><em>Feedback.</em> If the spaceship fell inside the red circle,
+it turned red indicating the new location was accurately
+predicted.</p></li>
+<li><p><em>NEW Trial starts.</em> The spaceship location observed serves
+as the starting point of the next trial.</p></li>
+</ol>
+<!-- > ''... participants were required to predict the future position of a spaceship moving around planet Earth along a specified orbit (...) Its location was given in radians (rad) using the center of the orbit as reference. On every trial, the spaceship appeared for half a second on a given point of its orbit, after which it disappeared. Participants had to click on the position where they thought it would reappear in the next trial. After their choice, a red dot indicated the location they selected and a red circle a fixed margin of error. At the same time, the spaceship showed up in its new position. If it fell inside the red circle, it turned red indicating the new location was accurately predicted or remained the same color otherwise. There was no time limit for participants to emit their responses. This sequence was repeated throughout the experiment. Moreover, if the spaceship gave a full lap in a counterclock-wise direction, i.e., moving 2π rad, the second lap would continue from 2π rad to 4π rad, and so on. Similarly if the spaceship completed a full lap in a clockwise direction, its next position was given according to values of the previous lap. We followed the same logic to register participant’s responses. This transformation allowed the range of possible values of observations and responses to span from -∞ to ∞, and was particularly useful to avoid sudden -->
+<!-- changes of position from 2π rad to 0 every time a full lap was completed.'' -->
+<!-- > -->
+<p><strong>No. of trials</strong>: 300 trials per condition. 1200 trials
+in total.</p>
+<p><strong>Conditions:</strong> The task included the following four
+experimental conditions:</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Stationary condition</em>. The spaceship location on all 300
+trials was determined by taking a sample of a single Normal
+distribution, with a mean and variance that remained fixed during the
+entire time.</p></li>
+<li><p><em>Abrupt condition</em></p></li>
+<li><p><em>Gradual condition</em></p></li>
+<li><p><em>Mixed condition</em> A mixture of the Abrupt and Gradual
+condition.</p></li>
+</ol>
 </div>
 <div id="data-description" class="section level1">
 <h1>Data description</h1>
@@ -1927,7 +1936,7 @@ the first 5 observations collected for participant 15 in condition
 ## [3,] 6.132120 6.024975 5.796635        0      0 0.5298493
 ## [4,] 6.259605 5.532261 5.796635        0      0 2.5353324
 ## [5,] 5.524184 5.781220 5.796635        0      0 2.1265852</code></pre>
-<p>For each trial, we collect the following information:</p>
+<p>For each trial, we keep track of the following information:</p>
 <ol style="list-style-type: decimal">
 <li>Predicted location (<code>resp</code>) - The response the
 participant gave when trying to predict the location of the spaceship on
@@ -1937,28 +1946,54 @@ the spaceship that the participant observes.</li>
 <li>Mean location (<code>mean</code>) - The mean (in radians) of the
 Normal distribution from where the locations observed on every trial are
 observed.</li>
-<li>Velocity (<code>velocity</code>) -</li>
+<li>Velocity (<code>velocity</code>) - The rate of change</li>
 <li>Change-points (<code>change</code>) - A binary variable indicating
 whether a change has occured or not</li>
 <li>RTs (<code>rt</code>) - Response time in seconds</li>
 </ol>
-<p>The four conditions are described below.</p>
-<div id="conditions" class="section level2">
-<h2>Conditions</h2>
+<div id="transformations" class="section level2">
+<h2>Transformations</h2>
+<p>All variables related to the spaceship position along the orbit
+(<code>resp</code>, <code>true</code> and <code>mean</code>) are
+measured in radians, however, they are not restricted to the <span class="math inline">\((0, 2\pi)\)</span> interval. For example, if the
+spaceship had completed more than a full lap counter-clocwkise, its
+position could take values larger than <span class="math inline">\(2\pi\)</span>.</p>
+<p>Velazquez, Villarreal and Bouzas (2019) modeled data obtained using
+the same task using three different RL models that focused on the
+prediction error observed on every trial. However, in order to model
+these data using the Circular Drift Diffusion we will need to transform
+the data to make it fit into the <span class="math inline">\((0,
+2\pi)\)</span> interval. To do so, we will simply keep the remainder
+obtained from dividing the values recorded by <span class="math inline">\(2\pi\)</span>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>ag[,<span class="st">&quot;resp&quot;</span>,,] <span class="ot">&lt;-</span> ag[,<span class="st">&quot;resp&quot;</span>,,] <span class="sc">%%</span> (<span class="dv">2</span><span class="sc">*</span>pi)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>ag[,<span class="st">&quot;true&quot;</span>,,] <span class="ot">&lt;-</span> ag[,<span class="st">&quot;true&quot;</span>,,] <span class="sc">%%</span> (<span class="dv">2</span><span class="sc">*</span>pi)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>ag[,<span class="st">&quot;mean&quot;</span>,,] <span class="ot">&lt;-</span> ag[,<span class="st">&quot;mean&quot;</span>,,] <span class="sc">%%</span> (<span class="dv">2</span><span class="sc">*</span>pi)</span></code></pre></div>
+</div>
+<div id="required-cleaning-steps" class="section level2">
+<h2>Required cleaning steps</h2>
+</div>
+</div>
+<div id="data-per-condition" class="section level1">
+<h1>Data per condition</h1>
 <p>There are four different experimental conditions in this experiment.
 To discuss each one of them</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>data_stationary <span class="ot">&lt;-</span> ag[,,<span class="dv">1</span>,]</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>data_abrupt <span class="ot">&lt;-</span> ag[,,<span class="dv">2</span>,]</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>data_gradual <span class="ot">&lt;-</span> ag[,,<span class="dv">3</span>,]</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>data_mixed <span class="ot">&lt;-</span> ag[,,<span class="dv">4</span>,]</span></code></pre></div>
-<div id="stationary" class="section level3">
-<h3>Stationary</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">unique</span>(data_stationary[,<span class="st">&quot;change&quot;</span>,])</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]
-## [1,]    0    0    0    0    0    0    0    0    0     0     0     0     0     0
-##      [,15] [,16] [,17] [,18] [,19] [,20] [,21] [,22] [,23] [,24]
-## [1,]     0     0     0     0     0     0     0     0     0     0</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">unique</span>(data_stationary[,<span class="st">&quot;mean&quot;</span>,])</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>data_stationary <span class="ot">&lt;-</span> ag[,,<span class="dv">1</span>,]  <span class="co"># Condition 1:  No changes</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>data_abrupt <span class="ot">&lt;-</span> ag[,,<span class="dv">2</span>,]      <span class="co"># Condition 2: </span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>data_gradual <span class="ot">&lt;-</span> ag[,,<span class="dv">3</span>,]     <span class="co"># Condition 3:</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>data_mixed <span class="ot">&lt;-</span> ag[,,<span class="dv">4</span>,]       <span class="co"># Condition 4: </span></span></code></pre></div>
+<div id="stationary-condition" class="section level3">
+<h3>Stationary condition</h3>
+<p>In this first condition, the position of the spaceship on every trial
+was sampled from a Normal distribution with a fixed mean and standard
+deviation.</p>
+<p>There are not any change-points (i.e., the <code>change</code>
+variable is always <code>0</code> in every trial), and the rate of
+change (the <code>velocity</code> variable) is always
+<code>0</code>.</p>
+<p>For each participant, the mean of the Normal distribution from which
+the trial-by-trial positions are sampled is randomly selected, but it
+remains fixed throughout all 300 trials.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">unique</span>(data_stationary[,<span class="st">&quot;mean&quot;</span>,])</span></code></pre></div>
 <pre><code>##         [,1]     [,2]      [,3]     [,4]    [,5]     [,6]     [,7]     [,8]
 ## [1,] 5.11906 3.772472 0.7007833 3.277056 5.11906 1.730773 0.959463 6.196545
 ##           [,9]   [,10]   [,11]    [,12]    [,13]      [,14]    [,15]    [,16]
@@ -1968,8 +2003,8 @@ To discuss each one of them</p>
 </div>
 <div id="abrupt" class="section level3">
 <h3>Abrupt</h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>abrupt_change <span class="ot">&lt;-</span> data_abrupt[,<span class="st">&quot;change&quot;</span>,]</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="fu">apply</span>(abrupt_change, <span class="dv">2</span>, table)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>abrupt_change <span class="ot">&lt;-</span> data_abrupt[,<span class="st">&quot;change&quot;</span>,]</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">apply</span>(abrupt_change, <span class="dv">2</span>, table)</span></code></pre></div>
 <pre><code>##   [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]
 ## 0  293  294  298  293  294  293  294  296  294   293   295   294   294   293
 ## 1    7    6    2    7    6    7    6    4    6     7     5     6     6     7
@@ -1977,12 +2012,11 @@ To discuss each one of them</p>
 ## 0   295   296   293   293   293   296   293   293   291   293
 ## 1     5     4     7     7     7     4     7     7     9     7</code></pre>
 </div>
+<div id="gradual" class="section level3">
+<h3>Gradual</h3>
 </div>
-<div id="gradual" class="section level2">
-<h2>Gradual</h2>
-</div>
-<div id="mixed" class="section level2">
-<h2>Mixed</h2>
+<div id="mixed" class="section level3">
+<h3>Mixed</h3>
 </div>
 </div>
 
