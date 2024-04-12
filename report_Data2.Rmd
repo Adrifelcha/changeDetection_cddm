@@ -1,0 +1,120 @@
+---
+title: "Change detection task - Data description"
+author: "Adriana F. Chavez"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: true
+    highlight: tango
+    fig_width: 10 
+    fig_height: 5 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(rmdformats)
+```
+
+# Task description:
+
+
+
+# Data description
+
+The data from this experiment is stored in the following `.RData` file:
+
+```{r}
+load("./archive/abrupt_gradual.Rdata")
+```
+
+This loads an object called `ag` which holds the data in four dimensions:
+
+- First dimension (rows) indicate trial count
+- Second dimension (columns) indicate the variables observed
+- Third dimension (pages) indicates the condition
+- Fourth dimension (repetition) indicates the participant.
+
+```{r}
+dim(ag)
+```
+
+```{r, echo=FALSE}
+I <- dim(ag)[4]
+J <- dim(ag)[3]
+K <- dim(ag)[1]
+colnames(ag) <- c("resp", "true", "mean", "velocity", "change", "rt")
+
+p <- 15
+c <- 1
+```
+
+There were `r I` participants in this experiment, which completed `r K` trials of each of the `r J` conditions included, with a total of `r ncol(data)` variables being recorded per trial. We'll describe these variables upon looking at the first 5 observations collected for participant `r p` in condition `r c`:
+
+```{r, echo=FALSE}
+ag[1:5,,c,p]
+```
+
+For each trial, we collect the following information:
+
+1. Predicted location (`resp`) - The response the participant gave when trying to predict the location of the spaceship on the next trial, measured in radians.
+2. The true location (`true`) - The location (in radians) of the spaceship that the participant observes.
+3. Mean location (`mean`) - The mean (in radians) of the Normal distribution from where the locations observed on every trial are observed.
+4. Velocity (`velocity`) - 
+5. Change-points (`change`) - A binary variable indicating whether a change has occured or not
+6. RTs (`rt`) - Response time in seconds
+
+The four conditions are described below.
+
+## Conditions
+
+There are four different experimental conditions in this experiment. To discuss each one of them 
+
+```{r}
+data_stationary <- ag[,,1,]  # Condition 1:  No changes
+data_abrupt <- ag[,,2,]      # Condition 2: 
+data_gradual <- ag[,,3,]     # Condition 3:
+data_mixed <- ag[,,4,]       # Condition 4: 
+```
+
+### Stationary condition
+
+In this first condition, the position of the spaceship on every trial was sampled from a Normal distribution with a fixed mean and standard deviation.
+
+There are not any change-points (i.e., the `change` variable is always `0` in every trial), and the rate of change (the `velocity` variable) is always `0`.
+
+```{r, echo=FALSE, results='hide'}
+# We double-check that there are no change-points recorded in this condition, for any of the 24 participants
+unique(data_stationary[,"change",])
+# We double-check that the velocity (i.e. rate of change) has a fixed value of `0`, for all 24 participants
+unique(data_stationary[,"velocity",])
+```
+
+For each participant, the mean of the Normal distribution from which the trial-by-trial positions are sampled is randomly selected, but it remains fixed throughout all 300 trials.
+
+```{r}
+unique(data_stationary[,"mean",])
+```
+
+
+
+
+### Abrupt
+
+```{r}
+abrupt_change <- data_abrupt[,"change",]
+apply(abrupt_change, 2, table)
+```
+
+### Gradual
+
+### Mixed
+
+# Required cleanng steps
+
+
+## Data object transformations
+
+## Cleanin steps
