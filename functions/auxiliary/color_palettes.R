@@ -18,3 +18,10 @@ color_stationary <- function(alpha){
            rgb(53/255,229/255,235/255,alpha), rgb(53/255,235/255,96/255,alpha),
            rgb(217/255,235/255,53/255,alpha), rgb(235/255,96/255,53/255,alpha)))
 }
+
+color_all_conditions <- function(alpha){
+  return(list("stationary (1)" = color_stationary(alpha),
+              "abrupt (2)"     = color_stationary(alpha),
+              "gradual (3)"    = color_stationary(alpha),
+              "mixed (4)"      = color_stationary(alpha)))
+}
