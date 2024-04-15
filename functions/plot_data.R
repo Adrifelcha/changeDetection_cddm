@@ -108,10 +108,13 @@ data_perCondition <- function(data, condition, sub=NA){
   
 }
 
-for(i in 1:4){
-  pdf(file = paste("../figs/data_condition-",i,".png",sep=""),   # The directory you want to save the file in
-      width = 4, # The width of the plot in inches
-      height = 4) # The height of the plot in inches
-  data_perCondition(ag,i) 
-  dev.off()
+if(!exists("test")){  test <- TRUE     }
+if(test){
+    for(i in 1:4){
+      pdf(file = paste("../figs/data_condition-",i,".pdf",sep=""),   # The directory you want to save the file in
+          width = 4, # The width of the plot in inches
+          height = 4) # The height of the plot in inches
+      data_perCondition(ag,i) 
+      dev.off()
+    }
 }
