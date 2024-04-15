@@ -16,6 +16,10 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(rmdformats)
+source("./functions/auxiliary/transformations.R")
+source("./functions/auxiliary/color_palettes.R")
+source("./functions/plot_data.R")
+source("./functions/auxiliary/auxiliary.R")
 ```
 
 # Task description:
@@ -123,7 +127,7 @@ data_mixed <- ag[,,4,]       # Condition 4:
 ```
 
 
-### Stationary condition
+## Stationary condition
 
 In this first condition, the position of the spaceship on every trial was sampled from a Normal distribution with a fixed mean and standard deviation.
 
@@ -142,16 +146,47 @@ For each participant, the mean of the Normal distribution from which the trial-b
 unique(data_stationary[,"mean",])
 ```
 
+```{r, fig.align='center'}
+data_perCondition(data = ag, condition = 1)
+```
 
+## Abrupt condition
 
+In this first condition, the position of the spaceship on every trial was sampled from a Normal distribution with a fixed mean and standard deviation.
 
-### Abrupt
+There are not any change-points (i.e., the `change` variable is always `0` in every trial), and the rate of change (the `velocity` variable) is always `0`.
 
 ```{r}
 abrupt_change <- data_abrupt[,"change",]
 apply(abrupt_change, 2, table)
 ```
 
-### Gradual
+```{r, echo=FALSE, results='hide'}
+# We double-check that the velocity (i.e. rate of change) has a fixed value of `0`, for all 24 participants
+unique(data_abrupt[,"velocity",])
+```
 
-### Mixed
+```{r, fig.align='center'}
+data_perCondition(data = ag,condition = 2)
+```
+
+## Gradual condition
+
+```{r}
+gradual_change <- data_gradual[,"change",]
+unique(gradual_change)
+```
+
+```{r, fig.align='center'}
+data_perCondition(data = ag,condition = 3)
+```
+
+## Mixed condition
+
+```{r}
+apply(data_mixed[,"change",],2,table)
+```
+
+```{r, fig.align='center'}
+data_perCondition(data = ag,condition = 4)
+```
