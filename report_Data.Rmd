@@ -16,6 +16,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(rmdformats)
+test <- FALSE
 source("./functions/auxiliary/transformations.R")
 source("./functions/auxiliary/color_palettes.R")
 source("./functions/plot_data.R")
@@ -25,6 +26,10 @@ source("./functions/auxiliary/auxiliary.R")
 # Task description:
 
 **Task set-up:** An image of planet Earth with an blue dotted orbit was presented at the center of the screen. On every trial, a spaceship would appear somewhere along the orbit, with the trial-by-trial position being sampled from a Normal distribution with some mean and standard deviation.
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("./archive/screen.PNG")
+```
 
 **Instruction:** Participants were instructed to predict the position of the spaceship on the next trial by clicking somewhere along the orbit.
 
