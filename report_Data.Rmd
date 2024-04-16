@@ -45,21 +45,17 @@ knitr::include_graphics("./archive/screen.PNG")
 
 0. *NEW Trial starts.* The spaceship location observed serves as the starting point of the next trial.
 
-<!-- > ''... participants were required to predict the future position of a spaceship moving around planet Earth along a specified orbit (...) Its location was given in radians (rad) using the center of the orbit as reference. On every trial, the spaceship appeared for half a second on a given point of its orbit, after which it disappeared. Participants had to click on the position where they thought it would reappear in the next trial. After their choice, a red dot indicated the location they selected and a red circle a fixed margin of error. At the same time, the spaceship showed up in its new position. If it fell inside the red circle, it turned red indicating the new location was accurately predicted or remained the same color otherwise. There was no time limit for participants to emit their responses. This sequence was repeated throughout the experiment. Moreover, if the spaceship gave a full lap in a counterclock-wise direction, i.e., moving 2π rad, the second lap would continue from 2π rad to 4π rad, and so on. Similarly if the spaceship completed a full lap in a clockwise direction, its next position was given according to values of the previous lap. We followed the same logic to register participant’s responses. This transformation allowed the range of possible values of observations and responses to span from -∞ to ∞, and was particularly useful to avoid sudden -->
-<!-- changes of position from 2π rad to 0 every time a full lap was completed.'' -->
-<!-- > -->
-
 **No. of trials**: 300 trials per condition. 1200 trials in total.
 
 **Conditions:** The task included the following four experimental conditions:
 
-1. *Stationary condition*. The spaceship location on all 300 trials was determined by taking a sample of a single Normal distribution, with a mean and variance that remained fixed during the entire time.
+1. *Stationary condition.* The spaceship location on all 300 trials was determined by taking a sample of a single Normal distribution, with a mean and variance that remained fixed during the entire time.
 
-2. *Abrupt condition*
+2. *Abrupt condition.*. The mean of the Normal distribution from where the spaceship trial-by-trial locations were sampled changed 
 
-3. *Gradual condition*
+3. *Gradual condition.* The mean of the Normal distribution from where the trial-by-trial 
 
-4. *Mixed condition* A mixture of the Abrupt and Gradual condition.
+4. *Mixed condition.* A mixture of the Abrupt and Gradual condition; The mean of the Normal distribution from where the trial-by-trial spaceship locations were sampled changed gradually, until a sudden and abrupt change was induced randomly, from where the mean continued to change gradually.
 
 
 # Data description
